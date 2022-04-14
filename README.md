@@ -1,4 +1,5 @@
 # go-myip
+No dependency, lightweight and fast way to get your public ip.
 
 ## Installation
 

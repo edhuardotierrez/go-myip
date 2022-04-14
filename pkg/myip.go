@@ -1,4 +1,4 @@
-package myip
+package pkg
 
 import (
 	"context"

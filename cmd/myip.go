@@ -1,22 +1,24 @@
-package main
+package cmd
 
 import (
 	"fmt"
-	"github.com/edhuardotierrez/go-myip"
+	"github.com/edhuardotierrez/go-myip/pkg"
 	"github.com/fatih/color"
 )
 
-func main() {
-	n := myip.New()
+func PrintMyIP() error {
+	n := pkg.New()
 	myPublicIp, err := n.GetPublicIP()
 	if err != nil {
 		fmt.Println("Get Public IP Error:", err.Error())
+		return err
 	}
 
 	//
 	myInterfaceIp, err := n.GetInterfaceIP()
 	if err != nil {
 		fmt.Println("Get Interface IP Error:", err.Error())
+		return err
 	}
 
 	hiWhite := color.New(color.FgHiWhite)
@@ -28,4 +30,6 @@ func main() {
 	boldHiWhite.Set()
 	fmt.Print(myPublicIp, "\n\n")
 	color.Unset()
+
+	return nil
 }
