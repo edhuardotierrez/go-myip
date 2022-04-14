@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/edhuardotierrez/go-myip/pkg"
+	"github.com/edhuardotierrez/go-myip/myip/cmd/util"
 	"github.com/fatih/color"
 )
 
@@ -12,7 +12,7 @@ func PrintMyIP() error {
 	color.Cyan("---------------------------------------------------")
 	color.Cyan("Getting your public IP address...")
 
-	n := pkg.New()
+	n := util.New()
 	myPublicIp, err := n.GetPublicIP()
 	if err != nil {
 		fmt.Println("Get Public IP Error:", err.Error())
