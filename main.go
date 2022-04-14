@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/edhuardotierrez/go-myip/cmd"
+	"github.com/edhuardotierrez/go-myip/myip/cmd"
 	"os"
 )
 
