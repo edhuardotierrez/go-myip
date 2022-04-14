@@ -7,6 +7,11 @@ import (
 )
 
 func PrintMyIP() error {
+
+	fmt.Print("\n\n")
+	color.Cyan("---------------------------------------------------")
+	color.Cyan("Getting your public IP address...")
+
 	n := pkg.New()
 	myPublicIp, err := n.GetPublicIP()
 	if err != nil {
@@ -24,12 +29,13 @@ func PrintMyIP() error {
 	hiWhite := color.New(color.FgHiWhite)
 	boldHiWhite := hiWhite.Add(color.Bold)
 
-	fmt.Print("\n\n")
+	color.Cyan("Interface: " + myInterfaceIp)
 	color.Cyan("---------------------------------------------------")
-	color.Cyan("Your Public IP (for interface: " + myInterfaceIp + ") is: \n\n")
+	color.Cyan("Your Public IP is: \n\n")
 	boldHiWhite.Set()
 	fmt.Print(myPublicIp, "\n\n")
 	color.Unset()
+	color.Cyan("---------------------------------------------------")
 
 	return nil
 }
