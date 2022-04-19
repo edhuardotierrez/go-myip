@@ -4,7 +4,7 @@ No dependency, lightweight and fast way to get your public ip.
 ## Installation
 
 ```bash
-go install https://github.com/edhuardotierrez/go-myip/myip
+go install github.com/edhuardotierrez/go-myip/myip@latest
 ```
 
 ## Usage
